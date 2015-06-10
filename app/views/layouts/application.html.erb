@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Rease</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	  <%= favicon_link_tag 'favicon.ico' %>
+	</head>
+	<body>
+
+	<header>
+		<%= link_to(image_tag("logo.png", id: "logo"),root_path) %>
+		<nav>
+			<ul id="BarraNavegadora" class="nav nav-tabs navbar-fixed-top">
+				<li role="presentation" class="<%= 'active' if current_page?(root_path) %>">
+					<%= link_to "Inicio", root_path %>
+				</li>
+				<li role="presentation" class="<%= 'active' if current_page?(:controller => "presentation", :action => "aprendizaje") %>">
+					<%= link_to "¿Qué es A+S?", :controller => "presentation", :action => "aprendizaje" %>
+				</li>
+				<li role="presentation" class="<%= 'active' if current_page?(:controller => "presentation", :action => "hacemos") %>">
+					<%= link_to "¿Qué hacemos?", :controller => "presentation", :action => "hacemos" %>
+				</li>
+				<li role="presentation" class="<%= 'active' if current_page?(:controller => "presentation", :action => "somos") %>">
+					<%= link_to "¿Quiénes somos?", :controller => "presentation", :action => "somos" %>
+				</li>
+				<li role="presentation" class="<%= 'active' if current_page?(:controller => "presentation", :action => "contacto") %>">
+					<%= link_to "Contacto", :controller => "presentation", :action => "contacto" %>
+				</li>
+				<li role="presentation">
+					<%= link_to "Conectarse", root_path %>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+	<section id="contenido">
+	<article>
+		<%= yield %>			
+	</article>
+	<aside>
+		<div id="panelAside" class="panel panel-default">	
+			<div class="panel-heading">
+				INICIAR SESIÓN
+			</div>
+			<div class="panel-body">
+				<p>NOTICIA O CONTENIDO</p>
+			</div>
+		</div>
+		<div id="panelAside" class="panel panel-default">	
+			<div class="panel-heading">
+				LINKS DE INTERÉS
+			</div>
+			<div class="panel-body">
+				 <%= link_to "CLAYSS", "http://www.clayss.org.ar/", class:"linkInteres" %>
+				 <%= link_to "CREAS - U. ALBERTO HURTADO", "http://creas.uahurtado.cl/2012/04/documentos-sobre-educacion.html", class:"linkInteres" %>
+				 <%= link_to "MARISTAS CHILE", "http://www.maristas.cl/evangelizacion_explicita/aprendizaje_servicio", class:"linkInteres" %>
+				 <%= link_to "CREADOR DEL A+S", "http://www.cehd.umn.edu/olpd/people/faculty/Furco.asp", class:"linkInteres" %>
+				 <%= link_to "EL APRENDIZAJE-SERVICIO POR ANDREW FURCO", "http://educacionglobalresearch.net/wp-content/uploads/03-Furco-1-Castellano.pdf", class:"linkInteres" %>
+				 
+				 
+				
+				 
+				 
+			</div>
+		</div>
+	</aside>
+</section>
+
+	<footer>
+		<!--Pie de página-->
+		<div  id="pies" class = "navbar-default ">
+				REASE - Red Nacional de Aprendizaje y Servicio<br>
+				Contacto: reasechile@gmail.com
+		</div>	
+	</footer>
+
+	</body>
+</html>
