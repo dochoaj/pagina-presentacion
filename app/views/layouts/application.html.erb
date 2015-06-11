@@ -35,10 +35,6 @@
 		</nav>
 	</header>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-
 	<section id="contenido">
 	<article>
 		<%= yield %>			
@@ -49,7 +45,9 @@
 				INICIAR SESIÓN
 			</div>
 			<div class="panel-body">
-				<p>NOTICIA O CONTENIDO</p>
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+
 			</div>
 		</div>
 		<div id="panelAside" class="panel panel-default">	
@@ -57,15 +55,12 @@
 				LINKS DE INTERÉS
 			</div>
 			<div class="panel-body">
+				 <%= link_to "FACEBOOK REASE", "https://www.facebook.com/reasechile", class:"linkInteres" %>
 				 <%= link_to "CLAYSS", "http://www.clayss.org.ar/", class:"linkInteres" %>
 				 <%= link_to "CREAS - U. ALBERTO HURTADO", "http://creas.uahurtado.cl/2012/04/documentos-sobre-educacion.html", class:"linkInteres" %>
 				 <%= link_to "MARISTAS CHILE", "http://www.maristas.cl/evangelizacion_explicita/aprendizaje_servicio", class:"linkInteres" %>
 				 <%= link_to "CREADOR DEL A+S", "http://www.cehd.umn.edu/olpd/people/faculty/Furco.asp", class:"linkInteres" %>
-				 <%= link_to "EL APRENDIZAJE-SERVICIO POR ANDREW FURCO", "http://educacionglobalresearch.net/wp-content/uploads/03-Furco-1-Castellano.pdf", class:"linkInteres" %>
-				 
-				 
-				
-				 
+				 <%= link_to "EL APRENDIZAJE-SERVICIO POR ANDREW FURCO", "http://educacionglobalresearch.net/wp-content/uploads/03-Furco-1-Castellano.pdf", class:"linkInteres" %> 
 				 
 			</div>
 		</div>

@@ -4161,7 +4161,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top {
   top: 0;
   border-width: 0 0 1px;
-  border-bottom-color: #30aaaa; /* AQUI SE AGREGO UNA MODIFICACION 10-06*/
+  border-bottom-color: #30bbbb; /* AQUI SE AGREGO UNA MODIFICACION 10-06*/
 }
 .navbar-fixed-bottom {
   bottom: 0;
